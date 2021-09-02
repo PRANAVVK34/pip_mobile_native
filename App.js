@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
-import Mobile from './Containers/CamSection';
+import Mobile from './Containers/VisitorsSettings';
 
 export default class App extends Component {
   componentDidMount() {}
