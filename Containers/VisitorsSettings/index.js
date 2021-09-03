@@ -4,7 +4,7 @@ import VisitorsLarge from '../../Components/VisitorsLarge';
 import VisitorsSmall from '../../Components/VisitorsSmall';
 import VisitorsEmailSettings from '../../Components/VisitorsEmailSettings';
 
-export default class Visitors extends Component {
+export default class VisitorsSettings extends Component {
   render() {
     return (
       <View style={styles.container}>
