@@ -8,6 +8,10 @@ import ButtonLarge from '../../Components/ButtonLarge';
 export default class IntroScreen extends Component {
   componentDidMount() {}
 
+  // show = () => {
+  //   this.props.navigation.navigate('MobileNumber');
+  // };
+
   render() {
     return (
       <View style={styles.container}>

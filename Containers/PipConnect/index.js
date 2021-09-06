@@ -30,6 +30,19 @@ export default class PipConnect extends Component {
             style={styles.close}
           />
         </View>
+
+        <View style={styles.callee_container}>
+          <Image
+            source={require('../../Assets/callee.png')}
+            style={styles.callee}
+          />
+          <Image source={require('../../Assets/mic.png')} style={styles.mic} />
+          <Image
+            source={require('../../Assets/video.png')}
+            style={styles.video}
+          />
+          <Text style={styles.callee_name}>Manoj | Shopper</Text>
+        </View>
       </View>
     );
   }
@@ -45,6 +58,7 @@ const styles = StyleSheet.create({
   caller: {
     width: 222,
     height: 222,
+    zIndex: 0,
   },
 
   decline: {
@@ -79,5 +93,42 @@ const styles = StyleSheet.create({
     height: 147,
     backgroundColor: 'black',
     opacity: 0.5,
+    position: 'absolute',
+    left: '50%',
+    top: 20,
+    zIndex: -1,
+  },
+  close: {
+    left: '47%',
+    top: 80,
+  },
+  callee_container: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
+    top: 130,
+  },
+  video: {
+    position: 'absolute',
+    bottom: 80,
+    right: 130,
+  },
+  mic: {
+    position: 'absolute',
+    bottom: 80,
+    left: 140,
+  },
+  callee_name: {
+    position: 'absolute',
+    color: 'white',
+    backgroundColor: 'black',
+    padding: 4,
+    borderRadius: 10,
+    paddingHorizontal: 40,
+    bottom: 30,
+    fontWeight: 14,
+    lineHeight: 19,
+    fontWeight: '700',
   },
 });

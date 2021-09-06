@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
-import Mobile from './Containers/VisitorsSettings';
+
+// import {createAppContainer} from 'react-navigation';
+// import {createStackNavigator} from 'react-navigation-stack';
+
+import IntroScreen from './Containers/IntroScreen';
+// import MobileNumber from './Containers/MobileNumber';
 
 export default class App extends Component {
   componentDidMount() {}
@@ -8,11 +13,16 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Mobile />
+        <IntroScreen />
       </View>
     );
   }
 }
+
+// const App = createStackNavigator({
+//   IntroScreen: {screen: IntroScreen},
+//   MobileNumber: {screen: MobileNumber},
+// });
 
 const styles = StyleSheet.create({
   container: {
@@ -20,3 +30,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
+
+// export default createAppContainer(App);
