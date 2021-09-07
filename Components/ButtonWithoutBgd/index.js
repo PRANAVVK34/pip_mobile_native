@@ -5,7 +5,7 @@ export default class ButtonWithoutBgd extends Component {
   render() {
     return (
       <View>
-        <Pressable style={styles.container}>
+        <Pressable style={styles.container} onPress={this.props.btnClick}>
           <Text style={styles.btnText}>RESEND CODE</Text>
         </Pressable>
       </View>

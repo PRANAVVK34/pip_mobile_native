@@ -5,7 +5,7 @@ export default class ButtonLarge extends Component {
   render() {
     return (
       <View>
-        <Pressable style={styles.container}>
+        <Pressable style={styles.container} onPress={this.props.setupPip}>
           <Text style={styles.btnText}>{this.props.btn_text}</Text>
         </Pressable>
       </View>

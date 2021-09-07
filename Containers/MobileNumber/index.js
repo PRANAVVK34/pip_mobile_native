@@ -19,7 +19,12 @@ export default class MobileNumber extends Component {
           />
           <InputMobile />
           <View style={styles.btn}>
-            <ButtonLarge btn_text="continue" />
+            <ButtonLarge
+              btn_text="continue"
+              setupPip={() => {
+                this.props.navigation.navigate('Verification');
+              }}
+            />
           </View>
         </View>
       </View>

@@ -13,7 +13,12 @@ export default class VideoProfile extends Component {
         <BackArrowText text="Your Video Intro (5 seconds)" />
         <Avatar />
         <View>
-          <ButtonLarge btn_text="Record Video" />
+          <ButtonLarge
+            btn_text="Record Video"
+            setupPip={() => {
+              this.props.navigation.navigate('Visitors');
+            }}
+          />
           <Text style={styles.skip}>Skip this step</Text>
         </View>
       </View>

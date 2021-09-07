@@ -16,7 +16,12 @@ export default class NameProfile extends Component {
           <Inputs placeholder="Krishnapillai" style={styles.place} />
           <Inputs placeholder="m@shopper.com" style={styles.place} />
         </View>
-        <ButtonLarge btn_text="Confirm" />
+        <ButtonLarge
+          btn_text="Confirm"
+          setupPip={() => {
+            this.props.navigation.navigate('VideoProfile');
+          }}
+        />
       </View>
     );
   }

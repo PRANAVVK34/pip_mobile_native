@@ -22,7 +22,12 @@ export default class SettingsPage extends Component {
         <Toggles day={this.day[6]} />
 
         <View style={styles.btn}>
-          <ButtonLarge btn_text="Go Live" />
+          <ButtonLarge
+            btn_text="Go Live"
+            setupPip={() => {
+              this.props.navigation.navigate('NameProfile');
+            }}
+          />
         </View>
       </View>
     );

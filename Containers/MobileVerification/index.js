@@ -17,7 +17,11 @@ export default class MobileNumber extends Component {
           heading_text_sub="We have sent you an SMS with the code to +62 1309 - 1710 - 1920"
         />
         <OtpField />
-        <ButtonWithoutBgd />
+        <ButtonWithoutBgd
+          btnClick={() => {
+            this.props.navigation.navigate('SettingsPage');
+          }}
+        />
       </View>
     );
   }
