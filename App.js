@@ -10,9 +10,11 @@ import MobileVerification from './Containers/MobileVerification';
 import SettingsPage from './Containers/SettingsPage';
 import NameProfile from './Containers/NameProfile';
 import VideoProfile from './Containers/VideoProfile';
+import CamSection from './Containers/CamSection';
 
 import Visitors from './Containers/Visitors';
 import VisitorsSettings from './Containers/VisitorsSettings';
+import Settings from './Containers/Settings';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,8 +31,10 @@ const MyStack = () => {
         <Stack.Screen name="SettingsPage" component={SettingsPage} />
         <Stack.Screen name="NameProfile" component={NameProfile} />
         <Stack.Screen name="VideoProfile" component={VideoProfile} />
+        <Stack.Screen name="CamSection" component={CamSection} />
         <Stack.Screen name="Visitors" component={Visitors} />
         <Stack.Screen name="VisitorsSettings" component={VisitorsSettings} />
+        <Stack.Screen name="Settings" component={Settings} />
       </Stack.Navigator>
     </NavigationContainer>
   );

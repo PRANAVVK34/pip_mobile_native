@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import BackArrowText from '../../Components/BackArrowText';
 import ButtonLarge from '../../Components/ButtonLarge';
 import Avatar from '../../Components/Avatar';
@@ -16,10 +16,16 @@ export default class VideoProfile extends Component {
           <ButtonLarge
             btn_text="Record Video"
             setupPip={() => {
-              this.props.navigation.navigate('Visitors');
+              this.props.navigation.navigate('CamSection');
             }}
           />
-          <Text style={styles.skip}>Skip this step</Text>
+          <TouchableOpacity
+            style={styles.skipButton}
+            onPress={() => {
+              this.props.navigation.navigate('Visitors');
+            }}>
+            <Text style={styles.skip}>Skip this step</Text>
+          </TouchableOpacity>
         </View>
       </View>
     );

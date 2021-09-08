@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import VisitorsLarge from '../../Components/VisitorsLarge';
 import VisitorsSmall from '../../Components/VisitorsSmall';
 
@@ -57,8 +57,19 @@ export default class Visitors extends Component {
           />
         </View>
         <View style={styles.footer}>
-          <Image source={require('../../Assets/group.png')} />
-          <Image source={require('../../Assets/settings.png')} />
+          <TouchableOpacity
+            onPress={() => {
+              this.props.navigation.navigate('VisitorsSettings');
+            }}>
+            <Image source={require('../../Assets/group.png')} />
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => {
+              this.props.navigation.navigate('Settings');
+            }}>
+            <Image source={require('../../Assets/settings.png')} />
+          </TouchableOpacity>
         </View>
       </View>
     );
