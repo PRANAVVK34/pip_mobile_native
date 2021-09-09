@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 
 export default class VisitorsSmall extends Component {
   render() {
@@ -17,6 +17,7 @@ export default class VisitorsSmall extends Component {
         </View>
         <View>
           <Text>{this.props.clockTime}</Text>
+
           <Image
             source={require('../../Assets/arrow_down.png')}
             style={styles.d_arrow}

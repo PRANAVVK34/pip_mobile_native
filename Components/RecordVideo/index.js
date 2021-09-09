@@ -26,9 +26,8 @@
 import React, {useState} from 'react';
 import {Text, View} from 'react-native';
 import AgoraUIKit from 'agora-rn-uikit';
-// import RtcEngine from 'react-native-agora';
 
-export default function Video() {
+export default function RecordVideo() {
   const [videoCall, setVideoCall] = useState(true);
 
   const rtcProps = {
@@ -38,8 +37,6 @@ export default function Video() {
 
   const callbacks = {
     EndCall: () => setVideoCall(false),
-    //  LocalMuteVideo: () =>
-    // LocalMuteAudio: () => setVideoCall(false),
   };
 
   const rtcPropsInterface = {

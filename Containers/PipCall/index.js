@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, StyleSheet, View, Text} from 'react-native';
+import {Image, StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
 export default class PipCall extends Component {
   componentDidMount() {}
@@ -41,10 +41,15 @@ export default class PipCall extends Component {
             source={require('../../Assets/message1.jpg')}
             style={styles.message}
           />
-          <Image
-            source={require('../../Assets/video_call1.jpg')}
-            style={styles.video_call}
-          />
+          <TouchableOpacity
+            onPress={() => {
+              this.props.navigation.navigate('PipConnect');
+            }}>
+            <Image
+              source={require('../../Assets/video_call1.jpg')}
+              style={styles.video_call}
+            />
+          </TouchableOpacity>
         </View>
       </View>
     );

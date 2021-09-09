@@ -14,6 +14,8 @@ import CamSection from './Containers/CamSection';
 
 import Visitors from './Containers/Visitors';
 import VisitorsSettings from './Containers/VisitorsSettings';
+import PipCall from './Containers/PipCall';
+import PipConnect from './Containers/PipConnect';
 import Settings from './Containers/Settings';
 
 const Stack = createNativeStackNavigator();
@@ -34,6 +36,8 @@ const MyStack = () => {
         <Stack.Screen name="CamSection" component={CamSection} />
         <Stack.Screen name="Visitors" component={Visitors} />
         <Stack.Screen name="VisitorsSettings" component={VisitorsSettings} />
+        <Stack.Screen name="PipCall" component={PipCall} />
+        <Stack.Screen name="PipConnect" component={PipConnect} />
         <Stack.Screen name="Settings" component={Settings} />
       </Stack.Navigator>
     </NavigationContainer>

@@ -27,13 +27,18 @@ export default class Visitors extends Component {
             place="Lahore, Pakisthan"
             clockTime="12:48"
           />
-          <VisitorsSmall
-            name="Kaiya Rhiel Madsen"
-            flag={require('../../Assets/USA.png')}
-            place="Miami, US"
-            dp={require('../../Assets/small_dp1.png')}
-            clockTime="13:09"
-          />
+          <TouchableOpacity
+            onPress={() => {
+              this.props.navigation.navigate('VisitorsSettings');
+            }}>
+            <VisitorsSmall
+              name="Kaiya Rhiel Madsen"
+              flag={require('../../Assets/USA.png')}
+              place="Miami, US"
+              dp={require('../../Assets/small_dp1.png')}
+              clockTime="13:09"
+            />
+          </TouchableOpacity>
           <VisitorsSmall
             name="Jordyn Aminoff"
             flag={require('../../Assets/japan.png')}
@@ -59,7 +64,7 @@ export default class Visitors extends Component {
         <View style={styles.footer}>
           <TouchableOpacity
             onPress={() => {
-              this.props.navigation.navigate('VisitorsSettings');
+              this.props.navigation.navigate('PipCall');
             }}>
             <Image source={require('../../Assets/group.png')} />
           </TouchableOpacity>
